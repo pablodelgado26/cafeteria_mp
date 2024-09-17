@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(180, 180, 180);
     color: black;
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 .main-nav .nav-link:houver {
-    color: #fffb00;
+    color: #4b4b4b;
 }
 
 /* personalização itens */
@@ -50,5 +50,48 @@ body {
 .itens-img {
     height: 500px;
     width: 500px;
-    
+    padding: 20px;
+    display: block;
+    margin: auto;
 }
+
+.itens-texto {
+    text-align: center;
+    padding: 20px;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-info {
+    margin-bottom: 5px;
+}
+
+.author-name,
+.autor-email {
+    margin-bottom: 5px;
+}
+
+.email-link {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.email-link:hover {
+    color: #fff;
+}
+
+.footer-copy {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
