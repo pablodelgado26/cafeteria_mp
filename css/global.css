@@ -24,6 +24,10 @@ body {
   font-size: 2em;
 }
 
+main {
+    margin: 5px;
+}
+
 .main-nav .nav-list {
   list-style: none;
   display: flex;
@@ -151,10 +155,15 @@ body {
   .principaisNoticias article p {
     color: #000000;
     font-size: 16px;
+<<<<<<< Updated upstream
   }
 
 .img-cafeteria {
     width: 50%;
     height: 50%;
     border-radius: 8px;
+=======
+    margin: 10px;
+    color: #494242;
+>>>>>>> Stashed changes
 }
