@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>Contato</title>
+</head>
+<body>
+    <header class="site-header">
+
+        <h1 class="site-title">Nosso Cardápio</h1>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../pages/sobre.html" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="../pages/contato.html" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="../pages/cardapio.html" class="nav-link">Cardápio</a></li>
+            </ul>
+        </nav>
+    </header>
+<br><br><br>
+<main class="principaisNoticias">
+    <section class="menu">
+        <h2>Cafés</h2>
+        <ul class="menu-list">
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('expresso')">Expresso</a>
+            <span class="item-price">R$ 5,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('cappuccino')">Cappuccino</a>
+            <span class="item-price">R$ 8,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('latte')">Latte</a>
+            <span class="item-price">R$ 7,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('mocha')">Mocha</a>
+            <span class="item-price">R$ 9,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('americano')">Americano</a>
+            <span class="item-price">R$ 6,00</span>
+            </li>
+        </ul>
+
+        <h2>Salgados</h2>
+        <ul class="menu-list">
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('coxinha')">Coxinha</a>
+            <span class="item-price">R$ 6,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('pao_de_queijo')">Pão de Queijo</a>
+            <span class="item-price">R$ 4,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('empada')">Empada</a>
+            <span class="item-price">R$ 5,50</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('kibe')">Kibe</a>
+            <span class="item-price">R$ 5,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('esfiha')">Esfiha</a>
+            <span class="item-price">R$ 4,50</span>
+            </li>
+        </ul>
+
+        <h2>Doces</h2>
+        <ul class="menu-list">
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('brigadeiro')">Brigadeiro</a>
+            <span class="item-price">R$ 3,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('bolo_de_cenoura')">Bolo de Cenoura</a>
+            <span class="item-price">R$ 4,50</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('torta_de_limao')">Torta de Limão</a>
+            <span class="item-price">R$ 6,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('pudim')">Pudim</a>
+            <span class="item-price">R$ 5,00</span>
+            </li>
+            <li class="menu-item">
+            <a href="#" class="item-link" onclick="showInfo('quindim')">Quindim</a>
+            <span class="item-price">R$ 4,00</span>
+            </li>
+        </ul>
+
+        <div id="item-info" class="item-info" style="display:none;">
+            <h3 id="item-title"></h3>
+            <p id="item-description"></p>
+            <button onclick="hideInfo()">Fechar</button>
+        </div>
+
+        <script>
+            const itemDetails = {
+            expresso: { title: 'Expresso', description: 'Café expresso forte e encorpado.' },
+            cappuccino: { title: 'Cappuccino', description: 'Café com leite vaporizado e espuma de leite.' },
+            latte: { title: 'Latte', description: 'Café com leite vaporizado.' },
+            mocha: { title: 'Mocha', description: 'Café com chocolate e leite vaporizado.' },
+            americano: { title: 'Americano', description: 'Café diluído com água quente.' },
+            coxinha: { title: 'Coxinha', description: 'Salgado de frango com massa crocante.' },
+            pao_de_queijo: { title: 'Pão de Queijo', description: 'Pão de queijo tradicional brasileiro.' },
+            empada: { title: 'Empada', description: 'Empada recheada com frango.' },
+            kibe: { title: 'Kibe', description: 'Salgado de carne moída com trigo.' },
+            esfiha: { title: 'Esfiha', description: 'Salgado recheado com carne ou queijo.' },
+            brigadeiro: { title: 'Brigadeiro', description: 'Doce de chocolate com granulado.' },
+            bolo_de_cenoura: { title: 'Bolo de Cenoura', description: 'Bolo de cenoura com cobertura de chocolate.' },
+            torta_de_limao: { title: 'Torta de Limão', description: 'Torta com recheio de limão e merengue.' },
+            pudim: { title: 'Pudim', description: 'Pudim de leite condensado.' },
+            quindim: { title: 'Quindim', description: 'Doce de coco com gemas de ovo.' }
+            };
+
+            function showInfo(item) {
+            const info = itemDetails[item];
+            document.getElementById('item-title').innerText = info.title;
+            document.getElementById('item-description').innerText = info.description;
+            document.getElementById('item-info').style.display = 'block';
+            }
+
+            function hideInfo() {
+            document.getElementById('item-info').style.display = 'none';
+            }
+        </script>
+</main>
+    <footer class="site-footer">
+        <address class="content-info">
+            <p class="author-name">Autor: Pablo Delgado & Miguel Sarti</p>
+            <p class="author-email">Email: <a href="mailto: pablo.j.abreu@aluno.senai.br" class="email-link">pablo.j.abreu@aluno.senai.br</a></p>
+            <p class="author-email">Email: <a href="mailto: pmiguel.sarti@aluno.senai.br" class="email-link">miguel.sarti@aluno.senai.br</a></p>
+        </address>
+        <p class="copy-info">&copy;2024 - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
