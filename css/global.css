@@ -11,10 +11,18 @@ body {
   color: black;
 }
 
+/* Variáveis */
+
+:root{
+  --cor-menu: #333;
+  --cor-menu-texto: #fff;
+  --cor-menu-texto-hover: #4b4b4b;
+}
+
 /* Menu */
 .site-header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--cor-menu);
+  color: var(--cor-menu-texto);
   padding: 20px;
   text-align: center;
 }
@@ -22,10 +30,6 @@ body {
 .site-title {
   margin-bottom: 10px;
   font-size: 2em;
-}
-
-main {
-    margin: x;
 }
 
 .main-nav .nav-list {
@@ -306,4 +310,15 @@ h2 {
 
 #item-info button:hover {
   background-color: #0056b3;
+}
+
+@media (min-width: 1100px) and (max-width: 2000px) {
+  .site-footer-sobre {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 170px;
+  }
 }
